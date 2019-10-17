@@ -1,0 +1,29 @@
+<h1>Instagram</h1>
+
+<p><%= notice %><p>
+<table>
+  <tbody>
+  <div class="user_post">
+    <% @feeds.each do |feed| %>
+      <div class="user_name">
+        <%= feed.user.name %>
+      </div>
+      <div class= "user_content">
+        <%= feed.content %>
+      </div>
+      <div class="user_image">
+        <%= image_tag feed.image.to_s %>
+      </div>
+            <div class="user_select">
+        <%= link_to '詳細を見る', feed_path(feed) %>
+        <%= link_to '編集する', edit_feed_path(feed) %>
+        <%= link_to '削除する', feed, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+      </div>
+    <% end %>
+  </div>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規投稿する', new_feed_path %>
