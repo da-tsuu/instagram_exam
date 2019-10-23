@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :set_profiles, only: [:show, :edit, :update]
   def new
     @user = User.new
   end
@@ -14,12 +14,33 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
   end
+
+  def edit
+  end
+
+  def update
+    if current_user == @user
+      if @user.update(user_params)
+        flash[:success] = 'ユーザー情報を編集しました。'
+        render :edit
+      else
+        flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+        render :edit
+      end
+  else
+    redirect_to feeds_path
+  end
+end
+
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :introduce, :age, :sex)
+  end
+
+  def set_profiles
+    @user = User.find(params[:id])
   end
 end

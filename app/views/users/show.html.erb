@@ -1,3 +1,25 @@
-<h1><%= @user.name %>のページ</h1>
+<div class="row">
+  <aside class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @user.name %></h3>
+      </div>
+      <div class="panel-body al-c">
+          <% if @user.image.present? %>
+            <%= image_tag @user.image.url %>
+          <% else %>
+            <%= image_tag("non-image.jpg") %>
+          <% end %>
+      </div>
+    </div>
+  </aside>
+  <div class="col-md-8">
+  <p><span class="orange b"><%= @user.name %></span>
+  <% if @user.age.present? %> &nbsp;<%= @user.age %>代 <% end %>
+  &nbsp;<%= @user.sex %></p>
+  <p class="orange b">自己紹介</p>
+  <p><%= @user.introduce %></p>
+  </div>
+</div>
 
-<p>メールアドレス: <%= @user.email %></p>
+<%= link_to 'プロフィールを編集する', edit_user_path %>
