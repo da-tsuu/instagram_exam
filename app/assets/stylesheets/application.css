@@ -14,3 +14,9 @@
  *= require_tree .
  *= require_self
  */
+.user_icon {
+    width:  180px;
+    height: 180px;
+    border-radius: 50%;
+    background-position: center center;
+  }
