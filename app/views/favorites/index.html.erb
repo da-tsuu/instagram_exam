@@ -1,0 +1,12 @@
+<% @favorites.each do |favorite| %>
+  <div class="user_name">
+    <%= favorite.user.name %>
+  </div>
+  <div class= "user_content">
+    <%= favorite.feed.content %>
+  </div>
+  <div class="user_image">
+    <%= image_tag favorite.feed.image.to_s %>
+  </div>
+
+<% end %>

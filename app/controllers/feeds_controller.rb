@@ -7,6 +7,7 @@ class FeedsController < ApplicationController
   end
 
   def show
+     @favorite = current_user.favorites.find_by(feed_id: @feed.id)
   end
 
   def new
@@ -28,7 +29,9 @@ class FeedsController < ApplicationController
   def create
     @feed = current_user.feeds.build(feed_params)
     if @feed.save
+      ConfirmMailer.confirm_mail(@feed).deliver
         redirect_to feeds_path, notice: '投稿を作成しました！'
+
     else
       render :new
     end

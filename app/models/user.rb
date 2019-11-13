@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :feeds
+  has_many :favorites, dependent: :destroy
   mount_uploader :image, ProfileimageUploader
   before_validation { email.downcase! }
   validates :name,  presence: true, length: { maximum: 30 }
