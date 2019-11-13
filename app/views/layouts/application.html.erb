@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <header class="topNavigation">
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -22,7 +23,8 @@
       <%= link_to "Login", new_session_path %>
     <% end %>
     　<%= link_to "投稿一覧", feeds_path %>
-    <div class="container">
+    </header>
+    <div class="content">
     <%= yield %>
     </div>
   </body>

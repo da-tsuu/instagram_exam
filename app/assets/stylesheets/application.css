@@ -20,3 +20,21 @@
     border-radius: 50%;
     background-position: center center;
   }
+
+  body{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+  .topNavigation{
+      height: 50px;
+      text-align: center;
+      background-color: #FFFFFF;
+      color: #fff;
+  }
+  .content{
+      flex: 1;
+      background-color: #FAFAFA;
+      text-align: center;
+      margin-top: 10px;
+  }
