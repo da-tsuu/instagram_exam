@@ -3,8 +3,13 @@
 <p><%= notice %><p>
 <table>
   <tbody>
+  <%= link_to '新規投稿する', new_feed_path %>
   <div class="user_post">
     <% @feeds.each do |feed| %>
+      <hr>
+      <div class ="user_icon">
+        <%= image_tag feed.user.image.to_s %>
+      </div>
       <div class="user_name">
         <%= feed.user.name %>
       </div>
@@ -14,16 +19,15 @@
       <div class="user_image">
         <%= image_tag feed.image.to_s %>
       </div>
-            <div class="user_select">
+      <div class="user_select">
         <%= link_to '詳細を見る', feed_path(feed) %>
+
+        <% if feed.user.id == current_user.id %>
         <%= link_to '編集する', edit_feed_path(feed) %>
         <%= link_to '削除する', feed, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+        <% end %>
       </div>
     <% end %>
   </div>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to '新規投稿する', new_feed_path %>

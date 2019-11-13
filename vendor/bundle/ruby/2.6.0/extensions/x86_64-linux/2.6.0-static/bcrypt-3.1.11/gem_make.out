@@ -1,0 +1,19 @@
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+/home/vagrant/.rbenv/versions/2.6.3/bin/ruby -I /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20191113-13057-1yl2p6l.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20191113-13057-18qeri5

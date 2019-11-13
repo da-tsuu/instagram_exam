@@ -1,0 +1,15 @@
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+/home/vagrant/.rbenv/versions/2.6.3/bin/ruby -I /home/vagrant/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20191113-13057-nn45cp.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/vagrant/workspace/rails_base_exam/insta_exam/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20191113-13057-z8lfxk
