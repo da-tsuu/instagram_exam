@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: 7e554d6aa59ae86aa0c72d90feeb19d37d970156
+  revision: 84be501445140e382fb96cc9314fae38427bcc41
   branch: master
   specs:
     faker (2.7.0)
@@ -89,6 +89,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     duktape (2.3.0.0)
     erubi (1.9.0)
     execjs (2.7.0)
@@ -228,6 +232,7 @@ DEPENDENCIES
   carrierwave
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv-rails
   duktape
   faker!
   jbuilder (~> 2.5)

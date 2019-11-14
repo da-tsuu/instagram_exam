@@ -1,7 +1,7 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
-  before_action :not_user_block, only: [:new]
-
+  before_action :not_user_block, only: [:new, :index]
+  before_action :license_for_changes, only: [:edit, :update, :destroy]
   def index
     @feeds = Feed.all
   end
@@ -65,4 +65,10 @@ class FeedsController < ApplicationController
      redirect_to new_session_path
    end
  end
+
+  def license_for_changes
+    if @feed.user_id != current_user.id
+      redirect_to feeds_path
+    end
+  end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "feeds#index"
+  root "users#new"
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :feeds do

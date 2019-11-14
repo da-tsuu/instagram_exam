@@ -1,6 +1,6 @@
 4a3c41ae890c29aef53395cdd33534ae0531b4eb		branch 'circleci' of https://github.com/stympy/faker
 fa2aeb37bebf0ab74afe480d8b675da8ce5fce70		branch 'jruby' of https://github.com/stympy/faker
-7e554d6aa59ae86aa0c72d90feeb19d37d970156		branch 'master' of https://github.com/stympy/faker
+84be501445140e382fb96cc9314fae38427bcc41		branch 'master' of https://github.com/stympy/faker
 b913e7cba609b42c74f7968840270c74a1cbbd0b	not-for-merge	tag '1.9.4' of https://github.com/stympy/faker
 401948a0c89acf81c748ea2d2988162e9fd94cb2	not-for-merge	tag '1.9.6' of https://github.com/stympy/faker
 ed1ef707e272772ef70a1e838cb2f6863b22b48b	not-for-merge	tag '2.0' of https://github.com/stympy/faker

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_profiles, only: [:show, :edit, :update]
+  before_action :profile_edit_permission, only: [:edit, :update]
   def new
     @user = User.new
   end
@@ -42,5 +43,11 @@ end
 
   def set_profiles
     @user = User.find(params[:id])
+  end
+
+  def profile_edit_permission
+    if @user.id != current_user.id
+      redirect_to user_path(@user.id)
+    end
   end
 end
